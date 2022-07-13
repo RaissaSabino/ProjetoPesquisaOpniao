@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeAdmComponent } from './home-adm/home-adm.component';
+import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     HomeAdmComponent,
+    FormUsuarioComponent,
   ],
   imports: [
     BrowserModule,
