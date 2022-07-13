@@ -1,0 +1,17 @@
+.card{
+    width: 60%;
+    background-color: white;
+    padding: 30px;
+    margin-inline: auto;
+    border-radius: 5px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.content>input{
+    width: 70%;
+}
