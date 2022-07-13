@@ -3,8 +3,7 @@ import { DataTableDirective } from 'angular-datatables';
 
 export interface Eventos {
   NomeEvento: string;
-  dataInicio: Date;
-  dataFim: Date;
+  ativo: string;
   qtdPergunta: number;
 }
 
@@ -25,11 +24,10 @@ export class HomeAdmComponent implements OnInit {
 
 
   ngOnInit(): void {
-    for (let i = 1; i < 100; i++) {
+    for (let i = 1; i < 30; i++) {
       this.array.push({
         NomeEvento: 'Formulário ' + i,
-        dataInicio: new Date('11/11/2021'),
-        dataFim: new Date('11/11/2022'),
+        ativo: 'Sim',
         qtdPergunta: 10,
       });
     }

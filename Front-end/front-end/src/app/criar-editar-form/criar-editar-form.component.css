@@ -15,3 +15,7 @@
 .content>input{
     width: 70%;
 }
+
+#inputs:focus{
+    outline: none;
+}
