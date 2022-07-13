@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap');
+
+*{font-family: 'Plus Jakarta Sans', sans-serif;}
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+.form {
+    grid-area: form;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+
+.form>div{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .2em;
+    align-content: center;
+    width: 90%;
+
+    transition : border 1s ease-out;
+
+    pointer-events: none;
+
+}
+
+.form>div>label{
+    justify-content: start;
+    align-self: baseline;
+    display: flex;
+    font-size: 1.3em;
+}
+
+.form>div>div{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+    gap: .5em;
+    pointer-events: auto;
+}
+
+.form>div>div>img{
+    width: 2em;
+    filter: invert(49%) sepia(14%) saturate(188%) hue-rotate(172deg) brightness(90%) contrast(88%);
+}
+.form>div>div>input{
+    border: none;
+    display: flex;
+    height: 4em;
+    width: 90%;
+    font-size: 1.1em;
+}
+.form>div>div>input:focus{
+    outline: none;
+}
+
+

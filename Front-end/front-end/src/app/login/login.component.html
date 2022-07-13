@@ -1,0 +1,26 @@
+<!-- <app-nav-bar-simples></app-nav-bar-simples> -->
+
+<div class="card">
+    <div class="Title">
+        <h1>Login</h1>
+    </div>
+
+    <form action="" class="form">
+        <div>
+            <label for="" >EDV</label>
+            <div id="div_1">
+                <input type="text" placeholder="Digite seu edv aqui" >
+            </div>
+        </div>
+
+        <div>
+            <label for="">Data de nascimento</label>
+            <div id="div_2">
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="nascimento" placeholder="Digite sua data de nascimento aqui" >
+            </div>
+        </div>
+    </form>
+
+    <button class="button-login" role="button" [routerLink] = "['beneficios']">ENTRAR</button>
+
+</div>
