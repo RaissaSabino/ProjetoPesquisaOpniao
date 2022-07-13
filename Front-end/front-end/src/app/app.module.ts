@@ -8,6 +8,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { LoginComponent } from './login/login.component';
 import { TelaChaveComponent } from './tela-chave/tela-chave.component';
 import { CriarEditarFormComponent } from './criar-editar-form/criar-editar-form.component';
+import { HomeAdmComponent } from './home-adm/home-adm.component';
 
 @NgModule({
   declarations: [
@@ -15,17 +16,18 @@ import { CriarEditarFormComponent } from './criar-editar-form/criar-editar-form.
     TopBarComponent,
     LoginComponent,
     TelaChaveComponent,
-    CriarEditarFormComponent
+    CriarEditarFormComponent,
+    HomeAdmComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path:'',component:TopBarComponent},
+      {path: '', component : HomeAdmComponent},{path: '', component : HomeAdmComponent},
       {path:'login',component:LoginComponent},
       {path:'acesso',component:TelaChaveComponent},
       {path:'edit',component:CriarEditarFormComponent}
-    ])
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

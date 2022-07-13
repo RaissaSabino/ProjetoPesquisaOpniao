@@ -1,0 +1,61 @@
+<div class="card">
+    <div class="card-header">
+        <h4>Formulários</h4>
+    </div>
+    <div class="card-body">
+        <div class="d-flex flex-row bd-highlight justify-content-end mb-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <img src="../../assets/img/icons/search.svg" alt="" srcset="">
+                    </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Pesquisar por nome do formulário" id="nomeEvento"
+                    aria-describedby="basic-addon1">
+            </div>
+    
+        </div>
+       
+        <table datatable [dtOptions]="dtOptions"  class="table  table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="no-sort">Excluir</th>
+                    <th scope="col">Nome do Formulário</th>
+                    <th scope="col">Qtd. Perguntas</th>
+                    <th scope="col">Data de início</th>
+                    <th scope="col">Data de fim</th>
+                    <th scope="col" class="no-sort">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of array">
+                    <td>
+                        <a class="delete" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                       
+                            <img src="../../assets/img/icons/trash.svg" alt="" srcset="">
+                        </a>
+                    </td>
+                    <td>{{a.NomeEvento}}</td>
+                    <td>{{a.qtdPergunta}}</td>
+                    <td>{{a.dataInicio | date: 'dd/MM/yyyy'}}</td>
+                    <td>{{a.dataFim | date: 'dd/MM/yyyy'}}</td>
+                    <td>
+                        <div class="actions">
+                            <a href="">
+                                <img src="../../assets/img/icons/bar-chart.svg" alt="" srcset="">
+                            </a>
+                            <div class="vr"></div>
+                            <a href="">
+                                <img src="../../assets/img/icons/edit.svg" alt="" srcset="">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="save-btn">
+        <img src="../../assets/img/icons/add.svg" alt="" srcset="">
+    </div>
+</div>
