@@ -13,9 +13,42 @@
 }
 
 .content>input{
-    width: 70%;
+    width: 100%;
 }
 
 #inputs:focus{
     outline: none;
+}
+
+.heading{
+    border-top: 2px solid #C1C7CC !important;
+    margin: 12px 0px;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.enunc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.end{
+    border-top: 2px solid #C1C7CC !important;
+    margin-top: 12px;
+    padding-top: 18px;
+    justify-items: space-between;
+}
+
+.alt{
+    margin: 12px;
+}
+.alt-1{
+    text-align: center;
+    margin-left: 12px;
+    height: 25px;
+    width: 25px;
 }

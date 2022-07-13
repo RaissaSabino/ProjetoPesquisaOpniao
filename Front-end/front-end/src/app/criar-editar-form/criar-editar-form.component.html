@@ -1,13 +1,71 @@
+<!-- Card Geral -->
 <div class="card">
+    <!-- Conteudo -->
     <div class="content">
+        <!-- Titulo do Formulário -->
         <label>
             Digite o nome do seu Formulário:
         </label>
+
         <input type="text" name="" id="inputs">
-        <div *ngIf="pergunta.tipo == 'discursiva'">
-            <h1>
-                nathan a cordeiro
-            </h1>
+
+        <!-- Loop geral das perguntas inseridas -->
+        <div *ngFor="let pg of Arr;let i = index">
+            <div class="heading">
+                Pergunta {{i+1}}
+                <!-- enunciado das perguntas -->
+                <div class="enunc">
+                    <label>
+                        Digite o enunciado:
+                    </label>
+                    <!-- Drop Down tipo das alternativas -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="pg{{i}}" data-bs-toggle="dropdown" aria-expanded="false" >
+                            Tipo de pergunta
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" (click)="setType($event,i)">Objetiva</a></li>
+                            <li><a class="dropdown-item" (click)="setType($event,i)">Multipla Escolha</a></li>
+                            <li><a class="dropdown-item" (click)="setType($event,i)">Discursiva</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <input type="text" name="" id="enunc{{i}}">
+
+                <!-- Mostras as opções conforme o tipo de pergunta -->
+                <!-- Objetiva -->
+                <div *ngIf="Arr[i].tipo == 'Objetiva'">
+                    <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
+                           <div class="alt">
+                               {{j+1}}
+                                <input type="text" name="" id="alts{{i}}{{j}}">
+                                <button *ngIf="j>0"  id="{{i}}{{j}}" (click)="removeAlt($event,i)" class="btn btn-danger alt-1"></button>
+                           </div>
+                    </div>
+                    <button (click)="addAlt(i)" class="btn btn-secondary">+</button>
+                </div>
+
+                <!-- Multipla Escolha -->
+                <div *ngIf="Arr[i].tipo == 'Multipla Escolha'">
+                    <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
+                        <div class="alt">
+                            {{j+1}}
+                             <input type="text" name="" id="alts{{i}}{{j}}">
+                             <button *ngIf="j>0"  id="{{i}}{{j}}" (click)="removeAlt($event,i)" class="btn btn-danger alt-1"></button>
+                        </div>
+                 </div>
+                 <button (click)="addAlt(i)" class="btn btn-secondary">+</button>
+                </div>
+            </div>
+
+            <!-- Botão remover Pergunta -->
+            <button *ngIf="i>0"  id="{{i}}" (click)="removePg($event)" class="btn btn-danger">remove</button>
+        </div>
+        <div class="end">
+            <!-- Botão Adicionar pergunta -->
+            <button (click)="addPg()" class="btn btn-secondary">Adicionar</button>
+            <!-- Botão Salvar Form -->
+            <button (click)="saveForm()" class="btn btn-success">Salvar</button>
         </div>
     </div>
 </div>
