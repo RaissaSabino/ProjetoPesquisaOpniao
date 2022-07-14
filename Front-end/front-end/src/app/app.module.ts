@@ -26,10 +26,11 @@ import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
     AppRoutingModule,
     [BrowserModule, DataTablesModule],
     RouterModule.forRoot([
-      {path: '', component : HomeAdmComponent},{path: '', component : HomeAdmComponent},
+      {path: '', component:TelaChaveComponent},
       {path:'login',component:LoginComponent},
       {path:'acesso',component:TelaChaveComponent},
-      {path:'edit',component:CriarEditarFormComponent}
+      {path:'edit',component:CriarEditarFormComponent},
+      {path:'user',component:FormUsuarioComponent}
     ]),
   ],
   providers: [],

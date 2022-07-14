@@ -7,7 +7,7 @@
             Digite o nome do seu Formulário:
         </label>
 
-        <input type="text" name="" id="inputs">
+        <input type="text" class="form-control" name="" id="inputs">
 
         <!-- Loop geral das perguntas inseridas -->
         <div *ngFor="let pg of Arr;let i = index">
@@ -30,15 +30,17 @@
                         </ul>
                     </div>
                 </div>
-                <input type="text" name="" id="enunc{{i}}">
+                <input type="text" name="" class="form-control" id="enunc{{i}}">
 
                 <!-- Mostras as opções conforme o tipo de pergunta -->
                 <!-- Objetiva -->
                 <div *ngIf="Arr[i].tipo == 'Objetiva'">
                     <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
                            <div class="alt">
-                               {{j+1}}  
-                                <input type="text" name="" id="alts{{i}}{{j}}">
+                            <h3>
+                                {{j+1}}
+                            </h3> 
+                                <input type="text" name="" class="text-in" id="alts{{i}}{{j}}">
                                 <button *ngIf="j>0"  id="{{i}}{{j}}" (click)="removeAlt($event,i)" class="btn btn-danger alt-1"></button>
                            </div>
                     </div>
@@ -49,8 +51,10 @@
                 <div *ngIf="Arr[i].tipo == 'Multipla Escolha'">
                     <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
                         <div class="alt">
-                            {{j+1}}
-                             <input type="text" name="" id="alts{{i}}{{j}}">
+                            <h3>
+                                {{j+1}}
+                            </h3> 
+                             <input type="text" name="" class="text-in"  id="alts{{i}}{{j}}">
                              <button *ngIf="j>0"  id="{{i}}{{j}}" (click)="removeAlt($event,i)" class="btn btn-danger alt-1"></button>
                         </div>
                  </div>
@@ -65,7 +69,7 @@
             <!-- Botão Adicionar pergunta -->
             <button (click)="addPg()" class="btn btn-secondary">Adicionar</button>
             <!-- Botão Salvar Form -->
-            <button (click)="saveForm()" class="btn btn-success">Salvar</button>
+            <button (click)="saveForm()" class="btn btn-success" style="float:right">Salvar</button>
         </div>
     </div>
 </div>

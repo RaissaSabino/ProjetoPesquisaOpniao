@@ -12,4 +12,9 @@ export class TelaChaveComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getCode(){
+    var elCod = document.getElementById('codigo') as HTMLInputElement
+
+    return elCod.value.toString()
+  }
 }

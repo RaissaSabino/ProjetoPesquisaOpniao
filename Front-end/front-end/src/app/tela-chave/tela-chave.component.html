@@ -7,11 +7,11 @@
         <div>
             <div id="div_1">
                 <img src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2FjY291bnRzXC9hNVwvNDAwMDA5OFwvcHJvamVjdHNcLzc4XC9hc3NldHNcL2FhXC8zMDk3NlwvN2Q0Y2E1YWIzMjU1ZGQwYWRkNTAwY2ZiZWI5OWViYjctMTU5NTQyNzA3MS5zdmcifQ:bosch:Ax-anXusJDREmMv1wjXO1Ce5UEUYLVj8QHhJgTJMOOE?width=2400" alt="">
-                <input type="text" placeholder="Digite seu o código aqui" >
+                <input type="text" placeholder="Digite seu o código aqui" id="codigo">
             </div>
         </div>
     </form>
 
-    <button class="button-login" role="button" [routerLink] = "['beneficios']">ENTRAR</button>
+    <button class="button-login" role="button" routerLink="/{{getCode()}}">ENTRAR</button>
 
 </div>
