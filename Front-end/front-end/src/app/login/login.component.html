@@ -1,25 +1,17 @@
-<!-- <app-nav-bar-simples></app-nav-bar-simples> -->
-
-<div class="card">
-    <div class="Title">
-        <h1>Login</h1>
+<body>
+    <div class="container">
+        <div class="title">LOGIN</div>
+        <form action="#">
+                <div class="input-box">
+                    <img src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2FjY291bnRzXC9hNVwvNDAwMDA5OFwvcHJvamVjdHNcLzc4XC9hc3NldHNcL2U1XC8zMTI1NlwvZWQ5ZmMxNzc2ZTJkOTUyYmM3YTkzNWJmMWRhOGM4MmQtMTU3MDgwMjI4MS5zdmcifQ:bosch:nXVDAMauEiNnCQL6dFt72SlpamHJvrLnCSFviZjhCn0?width=2400&color=0,0,0,1" alt="">
+                    <input type="text" placeholder="Insira seu edv"  required>  
+                </div>
+                <div class="input-box">
+                    <img src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2FjY291bnRzXC9hNVwvNDAwMDA5OFwvcHJvamVjdHNcLzc4XC9hc3NldHNcL2FhXC8zMDk3NlwvN2Q0Y2E1YWIzMjU1ZGQwYWRkNTAwY2ZiZWI5OWViYjctMTU5NTQyNzA3MS5zdmcifQ:bosch:Ax-anXusJDREmMv1wjXO1Ce5UEUYLVj8QHhJgTJMOOE?width=2400" alt="">
+                    <input type="password"  placeholder="Insira sua senha" required>
+                </div>
+            <button class="btn-login" [routerLink]="['/']">Entrar</button>
+        </form>
     </div>
-
-    <form action="" class="form">
-        <div>
-            <label for="" >EDV</label>
-            <div id="div_1">
-                <input type="text" placeholder="Digite seu edv aqui" >
-            </div>
-        </div>
-
-        <div>
-            <label for="">Data de nascimento</label>
-            <div id="div_2">
-                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="nascimento" placeholder="Digite sua data de nascimento aqui" >
-            </div>
-        </div>
-    </form>
-
-    <button class="button-login" role="button" [routerLink] = "['beneficios']">ENTRAR</button>
-</div>
+</body>
+    

@@ -10,6 +10,7 @@ import { TelaChaveComponent } from './tela-chave/tela-chave.component';
 import { CriarEditarFormComponent } from './criar-editar-form/criar-editar-form.component';
 import { HomeAdmComponent } from './home-adm/home-adm.component';
 import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
+import { CadastroAdmComponent } from './cadastro-adm/cadastro-adm.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
     CriarEditarFormComponent,
     HomeAdmComponent,
     FormUsuarioComponent,
+    CadastroAdmComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,9 +29,11 @@ import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
     [BrowserModule, DataTablesModule],
     RouterModule.forRoot([
       {path: '', component : HomeAdmComponent},{path: '', component : HomeAdmComponent},
+      {path:'formulario', component:FormUsuarioComponent},
+      {path:'cadastro', component:CadastroAdmComponent},
       {path:'login',component:LoginComponent},
       {path:'acesso',component:TelaChaveComponent},
-      {path:'edit',component:CriarEditarFormComponent}
+      {path:'create-edit',component:CriarEditarFormComponent}
     ]),
   ],
   providers: [],

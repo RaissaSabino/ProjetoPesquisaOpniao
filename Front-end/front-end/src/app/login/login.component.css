@@ -1,55 +1,137 @@
-
-.Title {
-    justify-self: center;
-    align-self: center;
-    grid-area: title;
-
-    
-}
-.Title>h1{
-
-        font-size: 3em;
-
-}
-
-.card {
-
-    margin: auto auto;
-    margin-top: 5em;
-    grid-gap: 1em;
-    padding: 0em 1em;
-    display: grid;
-    width: 30em;
-    height: 35em;
-    background-color: white;
-
-    box-shadow: 0.09rem 0.1rem 0.9rem -0.09rem gray;
-
-    grid-template-columns: auto;
-    grid-template-rows: 23% 50%;
-    grid-template-areas:
-        "title"
-        "form"
-        "login";
+#div_1{
+  border-bottom: .15em solid #C1C7CC !important;
 }
 
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans',  sans-serif;
+  
+}
+
+body{
+display: flex;
+height: 72vh;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+
+.container{
+width: 35%;
+background: rgb(255, 255, 255);
+padding: 40px 30px;
+box-shadow: 0.09rem 0.1rem 0.9rem -0.09rem gray;
+}
+
+.title{
+font-size: 35px;
+font-weight: bold;
+position: relative;
+text-align: center;
+}
+
+.container form .user-details{
+margin: 20px 0 12px 0;
+flex-direction: column;
+
+}
+
+form .input-box{
+margin-bottom: 15px;
+}
 
 
-.button-login {
-    grid-area: login;
-    align-self: center;
-    justify-self: center;
-    border:none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 0.8em 2em;
+.input-box input{
+height: 35px;
+width: 90%;
+margin-top: 20px;
+padding-left: 5px;
+font-size: 16px;
+transition: all 0.3s ease;
+border-bottom: .15em solid #C1C7CC !important;
+border-top: none;
+border-left: none;
+border-right: none;
+}
 
-    text-decoration: none;
-    width: 50%;
+.input-box input:focus
+{
+  outline: none;
+  border-bottom: .15em solid red !important;
+}
 
-    
-    font-size: 1.2em;
+
+.btn-login{
+width: 100%;
+margin: auto auto;
+padding: 16px 0px;
+margin-top: 25px;
+text-transform: uppercase;
+justify-self: center;
+align-items: center;
+font-size: 20px;
+letter-spacing: 3px;
+transition: 0.5s;
+background-color: red;
+border: none;
+color: white;
+}
+
+.btn-login:hover{
+opacity: 0.7;
+}
+
+img{
+  width: 2em;
+  filter: invert(49%) sepia(14%) saturate(188%) hue-rotate(172deg) brightness(90%) contrast(88%);
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+.container{
+  width: 70%;
+
+  }
+
+  .container .title{
+    font-size: 25px;
+  } 
+
+  .user-details .input-box input{
+    height: 45px;
+    width: 100% !important;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    font-size: 15px;
+    border-bottom-width: 2px;  
+  }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+.container{
+  width: 100%;
+
+  }
+  .container .title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .user-details .input-box input{
+    height: 40px;
+    width: 100% !important;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    font-size: 15px;
+    border-bottom-width: 2px;  
+  }
+
 }
