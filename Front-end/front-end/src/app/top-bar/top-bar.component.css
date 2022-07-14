@@ -1,6 +1,6 @@
 nav {
     margin-bottom: 2.5em;
-    height: 6.625em;
+    height: 4.5em;
     padding-left: 1.5em;
     padding-right: 1.5em;
     display: flex;
@@ -21,6 +21,7 @@ nav {
   }
   .navbar-brand {
       width: 100%;
+      display: block;
   }
   .nav-link {
     font-size: large;
@@ -33,9 +34,10 @@ nav {
       margin-top: 10px;
       height: 25px;
   }
-  #navbarNav{
-    justify-content: space-between;
+  .navbar-nav{
+    float: right;
   }
+
 
   .hover-link a:focus{
    border-bottom: 2px  solid #2d7db5;
@@ -55,6 +57,7 @@ nav {
     width: 26;
     height: 26;
     transition: 0.5s;
+    float: right;
 }
   @media (max-width: 991px) {
     nav {

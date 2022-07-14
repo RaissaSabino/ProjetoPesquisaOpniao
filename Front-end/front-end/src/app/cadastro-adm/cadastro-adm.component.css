@@ -1,72 +1,4 @@
 
-
-.Title {
-
-    font-size: 12px;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
-    grid-area: title;
-}
-.Title>h1{
-    font-size: 30px;
-}
-
-.card {
-
-    margin: auto auto;
-    margin-top: 5em;
-    grid-gap: 1em;
-    padding: 40px;
-    display: grid;
-    width: 35em;
-    height: 22em;
-    background-color: white;
-
-    box-shadow: 0.09rem 0.1rem 0.9rem -0.09rem gray;
-
-    grid-template-columns: auto;
-    grid-template-rows: 23% 50%;
-    grid-template-areas:
-        "title"
-        "form"
-        "login";
-}
-
-
-
-
-.button-login {
-    grid-area: login;
-    align-self: center;
-    justify-self: center;
-    border:none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 0.8em 2em;
-
-    text-decoration: none;
-    width: 50%;
-
-    
-    font-size: 1.2em;
-    /* &:hover,
-    &:focus {
-        background-color: map-get($map: $colors, $key: Bosch-Green);
-    }
-
-    &:active {
-        background-color: map-get($map: $colors, $key: Bosch-Turquoise);
-    } */
-}
-
-#div_1{
-    border-bottom: .15em solid #C1C7CC !important;
-}
-
-
 *{
     margin: 0;
     padding: 0;
@@ -98,41 +30,45 @@ body{
 }
 
 .container form .user-details{
+  display: flex;
   margin: 20px 0 12px 0;
   flex-direction: column;
-  
 }
 
-form .input-box{
+form .user-details .input-box{
   margin-bottom: 15px;
 }
 
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+}
 
-.input-box input{
+.user-details .input-box input{
   height: 35px;
-  width: 90%;
-  margin-top: 20px;
+  width: 100%;
+  outline: none;
   padding-left: 5px;
   font-size: 16px;
+  border-bottom-width: 2px;
   transition: all 0.3s ease;
-  border-bottom: .15em solid #C1C7CC !important;
+  border-bottom: 1px solid rgb(97, 97, 97);
   border-top: none;
   border-left: none;
   border-right: none;
-  }
-  
-  .input-box input:focus
-  {
-    outline: none;
-    border-bottom: .15em solid red !important;
-  }
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-bottom: 1px solid red;
+}
 
 
 .btn-login{
   width: 100%;
   margin: auto auto;
   padding: 16px 0px;
-  margin-top: 25px;
+  margin-top: 10px;
   text-transform: uppercase;
   justify-self: center;
   align-items: center;
@@ -143,16 +79,6 @@ form .input-box{
   border: none;
   color: white;
 }
-
-.btn-login:hover{
-  opacity: 0.7;
-}
-
-img{
-    width: 2em;
-    filter: invert(49%) sepia(14%) saturate(188%) hue-rotate(172deg) brightness(90%) contrast(88%);
-}
-
 
 @media only screen and (max-width: 1024px) {
   
