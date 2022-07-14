@@ -1,3 +1,67 @@
+
+
+.Title {
+
+    font-size: 12px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+}
+.Title>h1{
+    font-size: 30px;
+}
+
+.card {
+
+    margin: auto auto;
+    margin-top: 5em;
+    grid-gap: 1em;
+    padding: 40px;
+    display: grid;
+    width: 35em;
+    height: 22em;
+    background-color: white;
+
+    box-shadow: 0.09rem 0.1rem 0.9rem -0.09rem gray;
+
+    grid-template-columns: auto;
+    grid-template-rows: 23% 50%;
+    grid-template-areas:
+        "title"
+        "form"
+        "login";
+}
+
+
+
+
+.button-login {
+    grid-area: login;
+    align-self: center;
+    justify-self: center;
+    border:none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0.8em 2em;
+
+    text-decoration: none;
+    width: 50%;
+
+    
+    font-size: 1.2em;
+    /* &:hover,
+    &:focus {
+        background-color: map-get($map: $colors, $key: Bosch-Green);
+    }
+
+    &:active {
+        background-color: map-get($map: $colors, $key: Bosch-Turquoise);
+    } */
+}
+
 #div_1{
     border-bottom: .15em solid #C1C7CC !important;
 }

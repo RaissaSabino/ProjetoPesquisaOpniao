@@ -1,4 +1,4 @@
-.modal-body{
+ .modal-body{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@
     opacity: 0.8;
 }
 
-.btn{
+/*.btn{
     font-size: large;
     width: 180px;
     margin: 0 auto;
@@ -30,20 +30,62 @@
     transition: 0.5s;
 }
 
-/* HIDE RADIO */
-[type=radio] { 
+  
+  /* IMAGE STYLES */
+.smiles>fieldset>label>input[type=radio][type=radio] + img {
+    cursor: pointer;
+}
+  
+/* CHECKED STYLES */
+.smiles>fieldset>label>input[type=radio]:checked + img {
+   opacity: 0.3;
+} 
+
+.smiles>fieldset>label>input[type=radio] { 
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
   }
-  
-  /* IMAGE STYLES */
-[type=radio] + img {
-    cursor: pointer;
+
+
+.card{
+    width: 60%;
+    background-color: white;
+    padding: 30px;
+    margin-inline: auto;
+    border-radius: 5px;
+    min-width: 350px;
+    margin-bottom: 50px;
 }
-  
-/* CHECKED STYLES */
-[type=radio]:checked + img {
-   opacity: 0.3;
+
+.heading{
+    border-top: 2px solid #C1C7CC !important;
+    margin: 12px 0px;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.enunc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* input, textarea, button {
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    resize: none;
+}
+
+input[type="radio"]{
+    -webkit-appearance: radio;
+} */
+
+.end{
+    margin-top: 12px;
+    padding-top: 18px;
 }

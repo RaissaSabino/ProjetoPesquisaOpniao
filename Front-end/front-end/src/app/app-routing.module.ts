@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'cadastro', component:CadastroAdmComponent},
   {path:'login',component:LoginComponent},
   {path:'acesso',component:TelaChaveComponent},
-  {path:'create-edit',component:CriarEditarFormComponent},
+  {path:'create-edit',component:CriarEditarFormComponent}
 ];
 
 @NgModule({

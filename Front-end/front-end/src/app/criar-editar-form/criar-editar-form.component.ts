@@ -20,7 +20,7 @@ export class CriarEditarFormComponent implements OnInit {
 
   ngOnInit(): void {
     //cria a primeira pergunra generica
-    this.Arr.push({tipo : "", qtdeAlt: 1, enunciado:""})
+    this.Arr.push({idForm: 0 , tipo : "", qtdeAlt: 1, enunciado:""})
   }
 
   //set o tipo de pergunta
@@ -29,7 +29,7 @@ export class CriarEditarFormComponent implements OnInit {
     var target = event.target as HTMLElement
     var btn = document.getElementById("pg"+index)
     //zera a pergunta
-    var pergunta: Pergunta = { tipo : "", qtdeAlt: 1, enunciado:""}
+    var pergunta: Pergunta = { idForm: 0, tipo : "", qtdeAlt: 1, enunciado:""}
     //altera o nome
     if(btn){
       if(target.textContent){
@@ -43,7 +43,7 @@ export class CriarEditarFormComponent implements OnInit {
 
   //adiciona a pergunta ao array
   addPg(){
-    var pergunta: Pergunta = { tipo : "", qtdeAlt:1, enunciado:""}
+    var pergunta: Pergunta = { idForm: 0, tipo : "", qtdeAlt:1, enunciado:""}
     this.Arr.push(pergunta)
   }
 

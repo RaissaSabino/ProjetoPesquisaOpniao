@@ -28,12 +28,11 @@ import { CadastroAdmComponent } from './cadastro-adm/cadastro-adm.component';
     AppRoutingModule,
     [BrowserModule, DataTablesModule],
     RouterModule.forRoot([
-      {path: '', component : HomeAdmComponent},{path: '', component : HomeAdmComponent},
-      {path:'formulario', component:FormUsuarioComponent},
-      {path:'cadastro', component:CadastroAdmComponent},
+      {path: '', component:TelaChaveComponent},
       {path:'login',component:LoginComponent},
       {path:'acesso',component:TelaChaveComponent},
-      {path:'create-edit',component:CriarEditarFormComponent}
+      {path:'edit',component:CriarEditarFormComponent},
+      {path:'user',component:FormUsuarioComponent}
     ]),
   ],
   providers: [],
