@@ -1,8 +1,8 @@
 import { Component, OnInit,  ViewChild, AfterViewInit } from '@angular/core';
 import { DataTableDirective } from 'angular-datatables';
 
-export interface Eventos {
-  NomeEvento: string;
+export interface Forms {
+  NomeForm: string;
   ativo: string;
   qtdPergunta: number;
 }
@@ -14,7 +14,7 @@ export interface Eventos {
 })
 export class HomeAdmComponent implements OnInit {
 
-  array: Array<Eventos> = [];
+  array: Array<Forms> = [];
 
   @ViewChild(DataTableDirective, { static: false })
   datatableElement: DataTableDirective;
@@ -22,12 +22,13 @@ export class HomeAdmComponent implements OnInit {
 
   constructor() {}
 
+  Ativo: boolean;
 
   ngOnInit(): void {
     for (let i = 1; i < 30; i++) {
       this.array.push({
-        NomeEvento: 'Formulário ' + i,
-        ativo: 'Sim',
+        NomeForm: 'Formulário ' + i,
+        ativo : i%2 > 0 ? "Sim" : "Não",
         qtdPergunta: 10,
       });
     }
@@ -57,4 +58,12 @@ export class HomeAdmComponent implements OnInit {
     });
   }
 
+  ativo(ativo:string){
+    if(ativo == 'Sim'){
+      this.Ativo = true;
+    }
+    else{
+      this.Ativo = false;
+    }
+  }
 }

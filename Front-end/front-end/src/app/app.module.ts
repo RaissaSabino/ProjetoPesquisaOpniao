@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { TelaChaveComponent } from './tela-chave/tela-chave.component';
 import { CriarEditarFormComponent } from './criar-editar-form/criar-editar-form.component';
 import { HomeAdmComponent } from './home-adm/home-adm.component';
+import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomeAdmComponent } from './home-adm/home-adm.component';
     TelaChaveComponent,
     CriarEditarFormComponent,
     HomeAdmComponent,
+    FormUsuarioComponent,
   ],
   imports: [
     BrowserModule,

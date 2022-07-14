@@ -34,7 +34,7 @@
                             <img src="../../assets/img/icons/trash.svg" alt="" srcset="">
                         </a>
                     </td>
-                    <td>{{a.NomeEvento}}</td>
+                    <td>{{a.NomeForm}}</td>
                     <td>{{a.qtdPergunta}}</td>
                     <td>{{a.ativo}}</td>
                     <td>
@@ -46,6 +46,10 @@
                             <a href="">
                                 <img src="../../assets/img/icons/edit.svg" alt="" srcset="">
                             </a>
+                            <div class="vr"></div>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#staticAlert" (click)="ativo(a.ativo)">
+                                <img src="../../assets/img/icons/toggle.svg" alt="" srcset="">
+                            </a>
                         </div>
                     </td>
                 </tr>
@@ -55,6 +59,54 @@
     </div>
     <div class="save-btn">
         <img src="../../assets/img/icons/add.svg" alt="" srcset="">
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="../../assets/img/icons/delete.svg" class="modal-img">
+                <h1 class="modal-title" id="staticBackdropLabel">Excluir</h1>
+                <h5 class="modal-title" id="staticBackdropLabel">tem certeza que deseja excluir?</h5>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" data-bs-dismiss="modal" class="btn btn-danger">Excluir</button>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="staticAlert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div  class="modal-content">
+           
+            <div *ngIf="Ativo">
+                <div class="modal-body">
+                    <img src="../../assets/img/icons/alert.svg" class="modal-img">
+                    <h3 class="modal-title" id="staticBackdropLabel">DESATIVAR</h3>
+                    <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que deseja desativar o formulário?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-warning">Desativar</button>
+                </div>
+            </div>
+
+            <div *ngIf="Ativo == false">
+                <div class="modal-body">
+                    <img src="../../assets/img/icons/alert.svg" class="modal-img">
+                    <h3 class="modal-title" id="staticBackdropLabel">ATIVAR</h3>
+                    <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que deseja ativar o formulário?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-warning">Ativar</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
