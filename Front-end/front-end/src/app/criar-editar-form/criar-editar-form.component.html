@@ -37,7 +37,7 @@
                 <div *ngIf="Arr[i].tipo == 'Objetiva'">
                     <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
                            <div class="alt">
-                               {{j+1}}
+                               {{j+1}}  
                                 <input type="text" name="" id="alts{{i}}{{j}}">
                                 <button *ngIf="j>0"  id="{{i}}{{j}}" (click)="removeAlt($event,i)" class="btn btn-danger alt-1"></button>
                            </div>
