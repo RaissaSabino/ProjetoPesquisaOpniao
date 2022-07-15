@@ -1,6 +1,9 @@
+import { Alternativa } from "./alternativa";
+
 export interface Pergunta {
     idForm:number
-    tipo: string ;
+    tipo: number ;
     qtdeAlt: number;
-    enunciado : string
+    conteudoPergunta : string
+    alternativas : Array<Alternativa>
   }

@@ -20,7 +20,7 @@ export class CriarEditarFormComponent implements OnInit {
 
   ngOnInit(): void {
     //cria a primeira pergunra generica
-    this.Arr.push({idForm: 0 , tipo : "", qtdeAlt: 1, enunciado:""})
+    this.Arr.push({idForm: 0 , tipo : 0, qtdeAlt: 1, conteudoPergunta:"", alternativas: []})
   }
 
   //set o tipo de pergunta
@@ -28,14 +28,24 @@ export class CriarEditarFormComponent implements OnInit {
     //acha o dropdown
     var target = event.target as HTMLElement
     var btn = document.getElementById("pg"+index)
+    console.log(target.textContent)
     //zera a pergunta
-    var pergunta: Pergunta = { idForm: 0, tipo : "", qtdeAlt: 1, enunciado:""}
+    var pergunta: Pergunta = { idForm: 0, tipo : 0, qtdeAlt: 1, conteudoPergunta:"", alternativas: []}
     //altera o nome
     if(btn){
-      if(target.textContent){
-        btn.textContent = target.textContent
-        pergunta.tipo = target.textContent.toString() 
-        this.Arr[index].tipo = target.textContent.toString()
+      btn.textContent = target.textContent
+      if(target.textContent == 'Objetiva'){
+        pergunta.tipo = 1;
+        this.Arr[index].tipo = 1;
+        
+      }
+      else if(target.textContent == 'Multipla Escolha'){
+        pergunta.tipo = 2;
+        this.Arr[index].tipo = 2;
+      }
+      else if(target.textContent == 'Discursiva'){
+        pergunta.tipo = 3;
+        this.Arr[index].tipo = 3;
       }
     }
   }
@@ -43,7 +53,7 @@ export class CriarEditarFormComponent implements OnInit {
 
   //adiciona a pergunta ao array
   addPg(){
-    var pergunta: Pergunta = { idForm: 0, tipo : "", qtdeAlt:1, enunciado:""}
+    var pergunta: Pergunta = { idForm: 0, tipo : 0, qtdeAlt:1, conteudoPergunta:"", alternativas: []}
     this.Arr.push(pergunta)
   }
 
@@ -77,7 +87,7 @@ export class CriarEditarFormComponent implements OnInit {
     for(let i = 0;i<this.Arr.length;i++){
       var enunc = document.getElementById(`enunc${i}`) as HTMLInputElement
       var contEnunc = enunc.value?.toString()
-      this.Arr[i].enunciado = contEnunc
+      this.Arr[i].conteudoPergunta = contEnunc
 
       for(let j = 0; j<this.Arr[i].qtdeAlt;j++){
         var alt = document.getElementById(`alts${i}${j}`) as HTMLInputElement

@@ -1,6 +1,6 @@
 <div class="card">
    <div>
-      <h1>{{titulo}}</h1>
+      <h1>{{pesquisa.nome}}</h1>
       <br>
    </div>
    <div *ngFor="let pg of perguntas;let i = index">
@@ -8,23 +8,21 @@
          Pergunta {{i+1}}
          <!-- enunciado das perguntas -->
          <div class="enunc">
-            Enunciado {{i}}
+            {{perguntas[i].conteudoPergunta}}
             <!-- {{pg.enunciado }}         -->
          </div>
          <!-- Mostras as opções conforme o tipo de pergunta -->
          <!-- Objetiva -->
-
-         <div *ngIf="perguntas[i].tipo == 'Objetiva'">
-            <div *ngFor="let alt of alternativas; let j = index">
-               <div *ngIf="alternativas[j].idpg == i">
+         <h1>{{perguntas[i].tipo}}</h1>
+         <div *ngIf="perguntas[i].tipo == 1">
+            <div *ngFor="let alt of perguntas[i].alternativas; let j = index">
                   <div class="form-check">
                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                      <label class="form-check-label" for="flexRadioDefault1">{{alternativas[j].content}}</label>
                   </div>
-               </div>
             </div>
          </div>
-         <div *ngIf="perguntas[i].tipo == 'Multipla Escolha'">
+         <div *ngIf="perguntas[i].tipo == 2">
             <div *ngFor="let alt of alternativas; let j = index">
                <div *ngIf="alternativas[j].idpg == i">
                   <div class="form-check">
@@ -36,7 +34,7 @@
                </div>
             </div>
          </div>
-         <div *ngIf="perguntas[i].tipo == 'Discursiva'">
+         <div *ngIf="perguntas[i].tipo == 3">
             <input type="text" name="" id="" class="form-control">
             <!-- <div class="smiles">
                <fieldset>

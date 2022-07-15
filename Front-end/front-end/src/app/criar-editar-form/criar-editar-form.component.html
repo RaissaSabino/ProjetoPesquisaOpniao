@@ -34,7 +34,8 @@
 
                 <!-- Mostras as opções conforme o tipo de pergunta -->
                 <!-- Objetiva -->
-                <div *ngIf="Arr[i].tipo == 'Objetiva'">
+                
+                <div *ngIf="Arr[i].tipo == 1">
                     <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
                            <div class="alt">
                             <h3>
@@ -48,7 +49,7 @@
                 </div>
 
                 <!-- Multipla Escolha -->
-                <div *ngIf="Arr[i].tipo == 'Multipla Escolha'">
+                <div *ngIf="Arr[i].tipo == 2">
                     <div *ngFor="let alt of counter(Arr[i].qtdeAlt); let j = index">
                         <div class="alt">
                             <h3>

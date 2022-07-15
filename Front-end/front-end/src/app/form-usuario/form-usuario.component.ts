@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Alternativa } from '../alternativa';
 import { Pergunta } from '../pergunta';
 import axios from "axios";
+import { Pesquisa } from '../pesquisa';
 
 @Component({
   selector: 'app-form-usuario',
@@ -11,6 +12,7 @@ import axios from "axios";
 export class FormUsuarioComponent implements OnInit {
 
   titulo : string
+  pesquisa : Pesquisa
   perguntas : Array<Pergunta> =[]
   alternativas : Array<Alternativa> = []
 
@@ -19,7 +21,7 @@ export class FormUsuarioComponent implements OnInit {
   ngOnInit(): void {
 
     var config = {
-      "url": "http://localhost:5253/Pesquisa/get",
+      "url": "http://localhost:5253/Pesquisa/get/nathan123",
       "method": "GET",
       "timeout": 0,
     };
@@ -27,12 +29,14 @@ export class FormUsuarioComponent implements OnInit {
     var instance = this;
     axios(config)
     .then(function (response:any) {
-      instance.perguntas = response.data;
-      console.log(response.data);
+      instance.pesquisa = response.data;
+      instance.perguntas = instance.pesquisa.perguntas;
+      
     })
     .catch(function (error:any) {
       console.log(error);
     });
+    
     
 
     // this.titulo = 'Formulário 1'
@@ -60,7 +64,7 @@ export class FormUsuarioComponent implements OnInit {
     //   }
     // }
     console.log(this.perguntas)
-    console.log(this.alternativas)
+    // console.log(this.alternativas)
   }
 
   counter(i:number){
