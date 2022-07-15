@@ -61,9 +61,24 @@
         background-color: map-get($map: $colors, $key: Bosch-Turquoise);
     } */
 }
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.modal-img{
+  width:100%; 
+  height:8em; 
+  margin-bottom: 1em;
+  opacity: 0.8;
+}
 
-#div_1{
-    border-bottom: .15em solid #C1C7CC !important;
+.btn{
+  font-size: large;
+  margin: 0 auto;
+  width: 180px;
 }
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Alternativa } from '../alternativa';
 import { Pergunta } from '../pergunta';
-import axios from "axios";
+import axios from 'axios';
 
 @Component({
   selector: 'app-form-usuario',
