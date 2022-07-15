@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-tela-chave',
   templateUrl: './tela-chave.component.html',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaChaveComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() {
+
+   }
 
   ngOnInit(): void {
   }

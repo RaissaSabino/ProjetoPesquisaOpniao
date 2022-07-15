@@ -11,6 +11,7 @@ import { CriarEditarFormComponent } from './criar-editar-form/criar-editar-form.
 import { HomeAdmComponent } from './home-adm/home-adm.component';
 import { FormUsuarioComponent } from './form-usuario/form-usuario.component';
 import { CadastroAdmComponent } from './cadastro-adm/cadastro-adm.component';
+import {AuthService} from './tela-chave/auth.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { CadastroAdmComponent } from './cadastro-adm/cadastro-adm.component';
       {path:'user',component:FormUsuarioComponent}
     ]),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
